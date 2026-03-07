@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
@@ -24,14 +23,12 @@ scroll-behavior:smooth;
 body{
 background:#f5f7fa;
 color:#333;
-overflow-x:hidden;
 }
 
 /* NAVBAR */
 
 header{
-background:rgba(11,42,74,0.95);
-backdrop-filter:blur(10px);
+background:#0b2a4a;
 color:white;
 display:flex;
 justify-content:space-between;
@@ -40,13 +37,11 @@ padding:20px 10%;
 position:sticky;
 top:0;
 z-index:1000;
-transition:0.4s;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
 header h1{
 font-size:22px;
-letter-spacing:2px;
+letter-spacing:1px;
 }
 
 nav a{
@@ -54,22 +49,11 @@ color:white;
 text-decoration:none;
 margin-left:25px;
 font-weight:bold;
-position:relative;
-}
-
-nav a::after{
-content:'';
-width:0%;
-height:2px;
-background:#4cc3ff;
-position:absolute;
-left:0;
-bottom:-5px;
 transition:0.3s;
 }
 
-nav a:hover::after{
-width:100%;
+nav a:hover{
+color:#4cc3ff;
 }
 
 /* HERO */
@@ -83,38 +67,6 @@ justify-content:center;
 text-align:center;
 color:white;
 padding:20px;
-position:relative;
-overflow:hidden;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-width:500px;
-height:500px;
-background:rgba(255,255,255,0.05);
-border-radius:50%;
-top:-150px;
-left:-150px;
-animation:float 8s infinite linear;
-}
-
-.hero::after{
-content:'';
-position:absolute;
-width:400px;
-height:400px;
-background:rgba(255,255,255,0.05);
-border-radius:50%;
-bottom:-150px;
-right:-150px;
-animation:float 10s infinite linear reverse;
-}
-
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(30px)}
-100%{transform:translateY(0)}
 }
 
 .hero h2{
@@ -136,20 +88,19 @@ border:none;
 color:#0b2a4a;
 font-size:16px;
 cursor:pointer;
-border-radius:30px;
+border-radius:5px;
 font-weight:bold;
 transition:0.3s;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 .hero button:hover{
-transform:translateY(-3px) scale(1.05);
+transform:scale(1.05);
 }
 
 /* SECCIONES */
 
 section{
-padding:90px 10%;
+padding:80px 10%;
 }
 
 .section-title{
@@ -157,17 +108,6 @@ text-align:center;
 font-size:36px;
 margin-bottom:50px;
 color:#0b2a4a;
-position:relative;
-}
-
-.section-title::after{
-content:'';
-width:80px;
-height:4px;
-background:#0ea5e9;
-display:block;
-margin:15px auto;
-border-radius:10px;
 }
 
 /* SOBRE NOSOTROS */
@@ -192,18 +132,12 @@ margin-top:60px;
 
 .stat{
 background:white;
-padding:40px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 font-size:28px;
 font-weight:bold;
 color:#0b2a4a;
-transition:0.4s;
-}
-
-.stat:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
 /* SERVICIOS */
@@ -216,33 +150,15 @@ gap:30px;
 
 .service-card{
 background:white;
-padding:35px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.4s;
+padding:30px;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.3s;
 text-align:center;
-position:relative;
-overflow:hidden;
-}
-
-.service-card::before{
-content:'';
-position:absolute;
-height:4px;
-width:0%;
-background:#0ea5e9;
-top:0;
-left:0;
-transition:0.4s;
-}
-
-.service-card:hover::before{
-width:100%;
 }
 
 .service-card:hover{
 transform:translateY(-10px);
-box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
 .service-card i{
@@ -256,7 +172,7 @@ margin-bottom:10px;
 color:#0b2a4a;
 }
 
-/* LOGOS */
+/* PROVEEDORES Y CLIENTES */
 
 .logos{
 display:grid;
@@ -268,15 +184,14 @@ text-align:center;
 .logo{
 background:white;
 padding:25px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
 font-weight:bold;
 transition:0.3s;
 }
 
 .logo:hover{
-transform:translateY(-5px) scale(1.05);
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transform:scale(1.05);
 }
 
 /* CONTACTO */
@@ -305,16 +220,9 @@ right:20px;
 background:#25D366;
 color:white;
 font-size:28px;
-padding:16px;
+padding:15px;
 border-radius:50%;
-box-shadow:0 5px 20px rgba(0,0,0,0.3);
-animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
-70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
-100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 .whatsapp:hover{
@@ -361,11 +269,13 @@ HIDROSEM Ingenieros SAC brinda soluciones profesionales en tratamiento de agua i
 
 </section>
 
+<!-- SOBRE NOSOTROS -->
+
 <section id="nosotros">
 
-<h2 class="section-title" data-aos="fade-up">Sobre Nosotros</h2>
+<h2 class="section-title">Sobre Nosotros</h2>
 
-<div class="about" data-aos="fade-up">
+<div class="about">
 
 <p>
 HIDROSEM Ingenieros SAC con RUC 20603988133 es una empresa con amplia experiencia en el sector de tratamiento de agua industrial.
@@ -386,42 +296,86 @@ Estamos inscritos en el Registro Nacional de Proveedores (RNP) y contamos con pe
 </div>
 
 <div class="stats">
-
-<div class="stat" data-aos="zoom-in">+10 Años de Experiencia</div>
-<div class="stat" data-aos="zoom-in" data-aos-delay="200">+120 Proyectos Realizados</div>
-<div class="stat" data-aos="zoom-in" data-aos-delay="400">+60 Clientes Industriales</div>
-
+<div class="stat">+10 Años de Experiencia</div>
+<div class="stat">+120 Proyectos Realizados</div>
+<div class="stat">+60 Clientes Industriales</div>
 </div>
 
 </section>
+
+<!-- SERVICIOS -->
 
 <section id="servicios">
 
-<h2 class="section-title" data-aos="fade-up">Nuestros Servicios</h2>
+<h2 class="section-title">Nuestros Servicios</h2>
 
 <div class="services">
 
-<div class="service-card" data-aos="fade-up"><i class="fas fa-water"></i><h3>Tratamiento de Agua Industrial</h3><p>Sistemas de purificación y acondicionamiento.</p></div>
+<div class="service-card" data-aos="zoom-in">
+<i class="fas fa-water"></i>
+<h3>Tratamiento de Agua Industrial</h3>
+<p>Tratamiento de agua para procesos industriales.</p>
+</div>
 
-<div class="service-card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-flask"></i><h3>Productos Químicos</h3><p>Productos químicos para calderos.</p></div>
+<div class="service-card" data-aos="zoom-in">
+<i class="fas fa-flask"></i>
+<h3>Productos Químicos</h3>
+<p>Productos químicos especializados para calderos.</p>
+</div>
 
-<div class="service-card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-tools"></i><h3>Mantenimiento de Calderos</h3><p>Servicios preventivos y correctivos.</p></div>
+<div class="service-card" data-aos="zoom-in">
+<i class="fas fa-tools"></i>
+<h3>Mantenimiento de Calderos</h3>
+<p>Mantenimiento de calderos, ablandadores automáticos y filtros.</p>
+</div>
 
-<div class="service-card" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-filter"></i><h3>Filtros y Ablandadores</h3><p>Instalación de sistemas de filtración.</p></div>
+<div class="service-card" data-aos="zoom-in">
+<i class="fas fa-filter"></i>
+<h3>Instalación de Sistemas</h3>
+<p>Diseño e instalación de ablandadores, filtros y dosificadores.</p>
+</div>
 
-<div class="service-card" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-industry"></i><h3>Osmosis Inversa</h3><p>Diseño e instalación de plantas.</p></div>
+<div class="service-card" data-aos="zoom-in">
+<i class="fas fa-industry"></i>
+<h3>Osmosis Inversa</h3>
+<p>Mantenimiento y diseño de equipos de osmosis.</p>
+</div>
 
-<div class="service-card" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-vial"></i><h3>Análisis de Agua</h3><p>Reactivos y análisis químicos.</p></div>
+<div class="service-card" data-aos="zoom-in">
+<i class="fas fa-vial"></i>
+<h3>Análisis de Agua</h3>
+<p>Reactivos químicos especializados para análisis de agua.</p>
+</div>
+
+<div class="service-card" data-aos="zoom-in">
+<i class="fas fa-recycle"></i>
+<h3>Resinas de Intercambio Iónico</h3>
+<p>Resinas aniónicas y catiónicas para tratamiento de agua.</p>
+</div>
+
+<div class="service-card" data-aos="zoom-in">
+<i class="fas fa-pump-soap"></i>
+<h3>Limpieza Industrial</h3>
+<p>Limpieza y succión de trampa de grasa y pozo séptico.</p>
+</div>
+
+<div class="service-card" data-aos="zoom-in">
+<i class="fas fa-box"></i>
+<h3>Materiales y Repuestos</h3>
+<p>Venta de materiales y repuestos en general.</p>
+</div>
 
 </div>
 
 </section>
 
+<!-- PROVEEDORES -->
+
 <section id="proveedores">
 
-<h2 class="section-title" data-aos="fade-up">Principales Proveedores</h2>
+<h2 class="section-title">Principales Proveedores</h2>
 
-<div class="logos" data-aos="fade-up">
+<div class="logos">
 
 <div class="logo">Hydronix</div>
 <div class="logo">Mar Cor Purification</div>
@@ -442,11 +396,13 @@ Estamos inscritos en el Registro Nacional de Proveedores (RNP) y contamos con pe
 
 </section>
 
+<!-- CLIENTES -->
+
 <section id="clientes">
 
-<h2 class="section-title" data-aos="fade-up">Principales Clientes</h2>
+<h2 class="section-title">Principales Clientes</h2>
 
-<div class="logos" data-aos="fade-up">
+<div class="logos">
 
 <div class="logo">Molinos Asociados SAC</div>
 <div class="logo">VSI Industrial</div>
@@ -458,10 +414,11 @@ Estamos inscritos en el Registro Nacional de Proveedores (RNP) y contamos con pe
 
 </section>
 
+<!-- CONTACTO -->
+
 <section id="contacto" class="contact">
 
-<h2 data-aos="fade-up">Contacto</h2>
-
+<h2>Contacto</h2>
 <br>
 
 <p>📍 Mz. I Lote 07 Asoc. de Prop. San Gabriel - Lima</p>
@@ -472,9 +429,7 @@ Estamos inscritos en el Registro Nacional de Proveedores (RNP) y contamos con pe
 </section>
 
 <footer>
-
 © 2026 HIDROSEM Ingenieros SAC
-
 </footer>
 
 <a class="whatsapp" href="https://wa.me/51974584564" target="_blank">
@@ -485,8 +440,7 @@ Estamos inscritos en el Registro Nacional de Proveedores (RNP) y contamos con pe
 
 <script>
 AOS.init({
-duration:1000,
-once:true
+duration:1000
 });
 </script>
 
