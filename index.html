@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HIDROSEM Ingenieros SAC | Tratamiento de Agua</title>
+<title>HIDROSEM Ingenieros SAC | Soluciones en Tratamiento de Agua</title>
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
 
@@ -22,10 +26,12 @@ color:#333;
 line-height:1.6;
 }
 
+/* HEADER */
+
 header{
-background:#0b1f3a;
+background:#0a1d37;
 color:white;
-padding:20px 10%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -36,12 +42,13 @@ z-index:1000;
 
 header h1{
 font-size:22px;
+letter-spacing:1px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
 font-weight:500;
 }
 
@@ -49,9 +56,11 @@ nav a:hover{
 color:#00b4d8;
 }
 
+/* HERO */
+
 .hero{
 height:90vh;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
 url("https://images.unsplash.com/photo-1581093458791-9d09e13d6c8a");
 background-size:cover;
 background-position:center;
@@ -64,21 +73,23 @@ padding:20px;
 }
 
 .hero h2{
-font-size:48px;
+font-size:52px;
 margin-bottom:20px;
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:30px;
+max-width:700px;
+margin:auto;
+margin-bottom:35px;
 }
 
 .btn{
 background:#00b4d8;
 color:white;
-padding:14px 30px;
-text-decoration:none;
+padding:15px 34px;
 border-radius:6px;
+text-decoration:none;
 font-weight:bold;
 }
 
@@ -86,16 +97,20 @@ font-weight:bold;
 background:#0077b6;
 }
 
+/* SECTIONS */
+
 section{
-padding:80px 10%;
+padding:90px 8%;
 }
 
 section h2{
-font-size:32px;
 text-align:center;
 margin-bottom:40px;
-color:#0b1f3a;
+font-size:34px;
+color:#0a1d37;
 }
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -105,15 +120,33 @@ gap:25px;
 
 .card{
 background:white;
-padding:25px;
+padding:28px;
 border-radius:8px;
-box-shadow:0 6px 20px rgba(0,0,0,.08);
+box-shadow:0 10px 30px rgba(0,0,0,.07);
 }
 
 .card h3{
-color:#0077b6;
 margin-bottom:10px;
+color:#0077b6;
 }
+
+/* STATS */
+
+.stats{
+background:#0a1d37;
+color:white;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+text-align:center;
+padding:70px 8%;
+}
+
+.stat h3{
+font-size:45px;
+color:#00b4d8;
+}
+
+/* LOGOS */
 
 .logos{
 display:grid;
@@ -130,22 +163,42 @@ box-shadow:0 5px 15px rgba(0,0,0,.08);
 font-weight:bold;
 }
 
+/* CTA */
+
+.cta{
+background:#0077b6;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.cta h2{
+color:white;
+margin-bottom:20px;
+}
+
+/* CONTACT */
+
 .contacto{
-background:#0b1f3a;
+background:#0a1d37;
 color:white;
 text-align:center;
 }
+
+/* FOOTER */
 
 footer{
 background:#020c1b;
 color:white;
 text-align:center;
 padding:20px;
+font-size:14px;
 }
 
 </style>
 
 </head>
+
 
 <body>
 
@@ -166,14 +219,19 @@ padding:20px;
 </header>
 
 
+
 <section class="hero">
 
-<div>
+<div data-aos="fade-up">
 
-<h2>Soluciones Integrales en Tratamiento de Agua</h2>
+<h2>Soluciones Avanzadas en Tratamiento de Agua</h2>
 
 <p>
-Ingeniería, suministro de equipos y servicios especializados para sistemas de tratamiento de agua industrial, comercial y municipal.
+
+Diseñamos, implementamos y mantenemos sistemas de tratamiento de agua
+para industrias, plantas de producción y organizaciones que requieren
+calidad, eficiencia y confiabilidad en sus procesos.
+
 </p>
 
 <a href="#contacto" class="btn">Solicitar Cotización</a>
@@ -186,19 +244,26 @@ Ingeniería, suministro de equipos y servicios especializados para sistemas de t
 
 <section id="nosotros">
 
-<h2>Sobre Nosotros</h2>
+<h2 data-aos="fade-up">Sobre Nosotros</h2>
 
-<p style="max-width:900px;margin:auto;text-align:center">
+<p style="max-width:900px;margin:auto;text-align:center" data-aos="fade-up">
 
-<strong>HIDROSEM Ingenieros SAC</strong> es una empresa especializada en el diseño, implementación, mantenimiento y optimización de sistemas de tratamiento de agua para aplicaciones industriales, comerciales e institucionales.
+<strong>HIDROSEM Ingenieros SAC</strong> es una empresa especializada en el desarrollo
+de soluciones tecnológicas para el tratamiento, control y optimización
+del uso del agua en aplicaciones industriales y comerciales.
 
-Nuestro enfoque está orientado a brindar soluciones integrales que permitan a nuestros clientes mejorar la eficiencia de sus procesos, optimizar el consumo de agua y cumplir con los estándares de calidad requeridos en sus operaciones.
+Nuestro equipo está conformado por profesionales con experiencia
+en ingeniería hidráulica, sistemas de filtración, desinfección,
+automatización y mantenimiento de plantas de tratamiento de agua.
 
-Contamos con profesionales especializados en ingeniería de procesos, sistemas hidráulicos, tratamiento de agua y mantenimiento de equipos industriales, lo que nos permite ofrecer soluciones técnicas confiables y adaptadas a las necesidades específicas de cada cliente.
+Gracias a nuestras alianzas con fabricantes internacionales,
+garantizamos el suministro de equipos confiables y tecnología
+de última generación.
 
-A través de alianzas estratégicas con fabricantes y proveedores internacionales reconocidos en la industria del tratamiento de agua, garantizamos el suministro de equipos, repuestos y tecnologías de alta calidad.
-
-Nuestro compromiso es ofrecer servicios eficientes, seguros y sostenibles que contribuyan al desarrollo de nuestros clientes y al uso responsable de los recursos hídricos.
+Nuestro objetivo es ofrecer soluciones eficientes que permitan
+a nuestros clientes mejorar la calidad del agua utilizada en
+sus procesos, reducir costos operativos y cumplir con estándares
+ambientales y sanitarios.
 
 </p>
 
@@ -206,50 +271,76 @@ Nuestro compromiso es ofrecer servicios eficientes, seguros y sostenibles que co
 
 
 
+<section class="stats">
+
+<div class="stat">
+<h3>150+</h3>
+<p>Proyectos Ejecutados</p>
+</div>
+
+<div class="stat">
+<h3>40+</h3>
+<p>Clientes Industriales</p>
+</div>
+
+<div class="stat">
+<h3>10+</h3>
+<p>Años de Experiencia</p>
+</div>
+
+<div class="stat">
+<h3>20+</h3>
+<p>Proveedores Internacionales</p>
+</div>
+
+</section>
+
+
+
 <section id="servicios">
 
-<h2>Nuestros Servicios</h2>
+<h2 data-aos="fade-up">Nuestros Servicios</h2>
 
 <div class="grid">
 
-<div class="card">
+<div class="card" data-aos="fade-up">
 <h3>Diseño de Sistemas de Tratamiento de Agua</h3>
-<p>Ingeniería y diseño de plantas de tratamiento de agua adaptadas a procesos industriales, comerciales y municipales.</p>
+<p>Ingeniería especializada para plantas de tratamiento de agua potable e industrial.</p>
 </div>
 
-<div class="card">
-<h3>Instalación de Equipos de Filtración</h3>
-<p>Implementación de sistemas de filtración para remoción de sedimentos, partículas y contaminantes.</p>
+<div class="card" data-aos="fade-up">
+<h3>Sistemas de Filtración</h3>
+<p>Instalación de filtros industriales para remoción de sedimentos y partículas.</p>
 </div>
 
-<div class="card">
+<div class="card" data-aos="fade-up">
 <h3>Sistemas de Desinfección UV</h3>
-<p>Instalación de tecnologías de desinfección ultravioleta para garantizar la calidad microbiológica del agua.</p>
+<p>Eliminación de microorganismos mediante tecnología ultravioleta.</p>
 </div>
 
-<div class="card">
+<div class="card" data-aos="fade-up">
 <h3>Sistemas de Dosificación Química</h3>
-<p>Integración de equipos de dosificación para control de químicos y optimización de procesos.</p>
+<p>Equipos automatizados para control de químicos en tratamiento de agua.</p>
 </div>
 
-<div class="card">
-<h3>Mantenimiento de Plantas de Agua</h3>
-<p>Mantenimiento preventivo y correctivo de plantas de tratamiento de agua.</p>
+<div class="card" data-aos="fade-up">
+<h3>Mantenimiento de Plantas</h3>
+<p>Servicios preventivos y correctivos para sistemas de tratamiento.</p>
 </div>
 
-<div class="card">
+<div class="card" data-aos="fade-up">
 <h3>Suministro de Equipos</h3>
-<p>Venta de equipos, repuestos y componentes para sistemas de tratamiento de agua.</p>
+<p>Venta de bombas, válvulas, sensores y componentes especializados.</p>
 </div>
 
-<div class="card">
-<h3>Optimización de Procesos</h3>
-<p>Evaluación técnica para mejorar el rendimiento de plantas existentes.</p>
+<div class="card" data-aos="fade-up">
+<h3>Optimización de Sistemas</h3>
+<p>Mejora de eficiencia en plantas de tratamiento existentes.</p>
 </div>
 
-<div class="card">
-<h3>Asesoría Técnica Especializada</h3>
-<p>Consultoría en ingeniería hidráulica y tratamiento de agua.</p>
+<div class="card" data-aos="fade-up">
+<h3>Consultoría Técnica</h3>
+<p>Asesoría especializada en proyectos hidráulicos.</p>
 </div>
 
 </div>
@@ -260,24 +351,20 @@ Nuestro compromiso es ofrecer servicios eficientes, seguros y sostenibles que co
 
 <section id="proveedores">
 
-<h2>Principales Proveedores</h2>
+<h2 data-aos="fade-up">Proveedores</h2>
 
 <div class="logos">
 
-<div class="logo">Hydronix Water Technology</div>
-<div class="logo">Mar Cor Purification</div>
-<div class="logo">Pentair Water</div>
-<div class="logo">Fluid-o-Tech</div>
-<div class="logo">SSI Stamford Scientific</div>
+<div class="logo">Pentair</div>
+<div class="logo">Hydronix</div>
 <div class="logo">Aquafine</div>
-<div class="logo">Flint & Walling</div>
-<div class="logo">Canature</div>
-<div class="logo">Hanna Instruments</div>
-<div class="logo">Ozotech</div>
 <div class="logo">Watts</div>
 <div class="logo">Lakos</div>
 <div class="logo">Seko</div>
 <div class="logo">Viqua</div>
+<div class="logo">Hanna Instruments</div>
+<div class="logo">Ozotech</div>
+<div class="logo">Canature</div>
 
 </div>
 
@@ -287,7 +374,7 @@ Nuestro compromiso es ofrecer servicios eficientes, seguros y sostenibles que co
 
 <section id="clientes">
 
-<h2>Principales Clientes</h2>
+<h2 data-aos="fade-up">Clientes</h2>
 
 <div class="logos">
 
@@ -303,25 +390,31 @@ Nuestro compromiso es ofrecer servicios eficientes, seguros y sostenibles que co
 
 
 
+<section class="cta">
+
+<h2>¿Necesitas optimizar tu sistema de tratamiento de agua?</h2>
+
+<p>Contáctanos para recibir asesoría técnica especializada.</p>
+
+<br>
+
+<a href="#contacto" class="btn">Solicitar Cotización</a>
+
+</section>
+
+
+
 <section id="contacto" class="contacto">
 
 <h2>Contacto</h2>
 
-<p>¿Necesitas una solución para tratamiento de agua?</p>
-
-<p>
-Nuestro equipo técnico puede ayudarte a diseñar, implementar o mejorar tu sistema de tratamiento de agua.
-</p>
+<p>Email: contacto@hidrosem.com</p>
+<p>Teléfono: +51 000 000 000</p>
+<p>Ubicación: Perú</p>
 
 <br>
 
-<p><strong>Email:</strong> contacto@hidrosem.com</p>
-<p><strong>Teléfono:</strong> +51 000 000 000</p>
-<p><strong>Ubicación:</strong> Perú</p>
-
-<br>
-
-<a href="mailto:contacto@hidrosem.com" class="btn">Solicitar Cotización</a>
+<a href="mailto:contacto@hidrosem.com" class="btn">Enviar Solicitud</a>
 
 </section>
 
@@ -329,10 +422,17 @@ Nuestro equipo técnico puede ayudarte a diseñar, implementar o mejorar tu sist
 
 <footer>
 
-© 2026 HIDROSEM Ingenieros SAC - Todos los derechos reservados
+© 2026 HIDROSEM Ingenieros SAC — Todos los derechos reservados
 
 </footer>
 
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
 
 </body>
 </html>
