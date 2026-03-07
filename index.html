@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HIDROSEM Ingenieros SAC | Soluciones en Tratamiento de Agua</title>
+<title>HIDROSEM Ingenieros SAC | Tratamiento de Agua Industrial</title>
 
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -21,9 +21,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
+background:#f4f7fb;
 color:#333;
-line-height:1.6;
 }
 
 /* HEADER */
@@ -31,7 +30,7 @@ line-height:1.6;
 header{
 background:#0a1d37;
 color:white;
-padding:20px 8%;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -60,7 +59,7 @@ color:#00b4d8;
 
 .hero{
 height:90vh;
-background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
 url("https://images.unsplash.com/photo-1581093458791-9d09e13d6c8a");
 background-size:cover;
 background-position:center;
@@ -73,7 +72,7 @@ padding:20px;
 }
 
 .hero h2{
-font-size:52px;
+font-size:55px;
 margin-bottom:20px;
 }
 
@@ -87,7 +86,7 @@ margin-bottom:35px;
 .btn{
 background:#00b4d8;
 color:white;
-padding:15px 34px;
+padding:15px 32px;
 border-radius:6px;
 text-decoration:none;
 font-weight:bold;
@@ -120,9 +119,9 @@ gap:25px;
 
 .card{
 background:white;
-padding:28px;
+padding:30px;
 border-radius:8px;
-box-shadow:0 10px 30px rgba(0,0,0,.07);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .card h3{
@@ -163,6 +162,31 @@ box-shadow:0 5px 15px rgba(0,0,0,.08);
 font-weight:bold;
 }
 
+/* PROYECTOS */
+
+.proyectos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.proyecto{
+background:white;
+border-radius:8px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.proyecto img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.proyecto p{
+padding:20px;
+}
+
 /* CTA */
 
 .cta{
@@ -177,12 +201,25 @@ color:white;
 margin-bottom:20px;
 }
 
-/* CONTACT */
+/* CONTACTO */
 
 .contacto{
 background:#0a1d37;
 color:white;
 text-align:center;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:4px;
+}
+
+form{
+max-width:500px;
+margin:auto;
 }
 
 /* FOOTER */
@@ -199,7 +236,6 @@ font-size:14px;
 
 </head>
 
-
 <body>
 
 <header>
@@ -210,6 +246,7 @@ font-size:14px;
 
 <a href="#nosotros">Nosotros</a>
 <a href="#servicios">Servicios</a>
+<a href="#proyectos">Proyectos</a>
 <a href="#proveedores">Proveedores</a>
 <a href="#clientes">Clientes</a>
 <a href="#contacto">Contacto</a>
@@ -224,13 +261,12 @@ font-size:14px;
 
 <div data-aos="fade-up">
 
-<h2>Soluciones Avanzadas en Tratamiento de Agua</h2>
+<h2>Ingeniería en Tratamiento de Agua</h2>
 
 <p>
 
-Diseñamos, implementamos y mantenemos sistemas de tratamiento de agua
-para industrias, plantas de producción y organizaciones que requieren
-calidad, eficiencia y confiabilidad en sus procesos.
+Soluciones tecnológicas para filtración, desinfección, dosificación
+y optimización de sistemas de agua para industrias y empresas.
 
 </p>
 
@@ -248,22 +284,16 @@ calidad, eficiencia y confiabilidad en sus procesos.
 
 <p style="max-width:900px;margin:auto;text-align:center" data-aos="fade-up">
 
-<strong>HIDROSEM Ingenieros SAC</strong> es una empresa especializada en el desarrollo
-de soluciones tecnológicas para el tratamiento, control y optimización
-del uso del agua en aplicaciones industriales y comerciales.
+HIDROSEM Ingenieros SAC es una empresa especializada en el diseño,
+implementación y mantenimiento de sistemas de tratamiento de agua
+para aplicaciones industriales, comerciales e institucionales.
 
-Nuestro equipo está conformado por profesionales con experiencia
-en ingeniería hidráulica, sistemas de filtración, desinfección,
-automatización y mantenimiento de plantas de tratamiento de agua.
+Nuestro enfoque se basa en ofrecer soluciones tecnológicas que
+permitan optimizar el uso del agua, mejorar la eficiencia de los
+procesos productivos y cumplir con estándares ambientales.
 
-Gracias a nuestras alianzas con fabricantes internacionales,
-garantizamos el suministro de equipos confiables y tecnología
-de última generación.
-
-Nuestro objetivo es ofrecer soluciones eficientes que permitan
-a nuestros clientes mejorar la calidad del agua utilizada en
-sus procesos, reducir costos operativos y cumplir con estándares
-ambientales y sanitarios.
+Trabajamos con equipos de alta calidad y proveedores internacionales
+para garantizar confiabilidad en cada proyecto.
 
 </p>
 
@@ -299,48 +329,65 @@ ambientales y sanitarios.
 
 <section id="servicios">
 
-<h2 data-aos="fade-up">Nuestros Servicios</h2>
+<h2 data-aos="fade-up">Servicios</h2>
 
 <div class="grid">
 
-<div class="card" data-aos="fade-up">
-<h3>Diseño de Sistemas de Tratamiento de Agua</h3>
-<p>Ingeniería especializada para plantas de tratamiento de agua potable e industrial.</p>
+<div class="card">
+<h3>Diseño de Plantas de Tratamiento</h3>
+<p>Ingeniería para sistemas de tratamiento de agua industrial.</p>
 </div>
 
-<div class="card" data-aos="fade-up">
+<div class="card">
 <h3>Sistemas de Filtración</h3>
-<p>Instalación de filtros industriales para remoción de sedimentos y partículas.</p>
+<p>Instalación de filtros industriales y equipos de purificación.</p>
 </div>
 
-<div class="card" data-aos="fade-up">
-<h3>Sistemas de Desinfección UV</h3>
-<p>Eliminación de microorganismos mediante tecnología ultravioleta.</p>
+<div class="card">
+<h3>Desinfección UV</h3>
+<p>Eliminación de microorganismos mediante tecnología UV.</p>
 </div>
 
-<div class="card" data-aos="fade-up">
-<h3>Sistemas de Dosificación Química</h3>
-<p>Equipos automatizados para control de químicos en tratamiento de agua.</p>
+<div class="card">
+<h3>Sistemas de Dosificación</h3>
+<p>Equipos automatizados para tratamiento químico.</p>
 </div>
 
-<div class="card" data-aos="fade-up">
-<h3>Mantenimiento de Plantas</h3>
-<p>Servicios preventivos y correctivos para sistemas de tratamiento.</p>
+<div class="card">
+<h3>Mantenimiento</h3>
+<p>Servicio preventivo y correctivo de plantas de tratamiento.</p>
 </div>
 
-<div class="card" data-aos="fade-up">
+<div class="card">
 <h3>Suministro de Equipos</h3>
-<p>Venta de bombas, válvulas, sensores y componentes especializados.</p>
+<p>Venta de bombas, válvulas, sensores y repuestos.</p>
 </div>
 
-<div class="card" data-aos="fade-up">
-<h3>Optimización de Sistemas</h3>
-<p>Mejora de eficiencia en plantas de tratamiento existentes.</p>
 </div>
 
-<div class="card" data-aos="fade-up">
-<h3>Consultoría Técnica</h3>
-<p>Asesoría especializada en proyectos hidráulicos.</p>
+</section>
+
+
+
+<section id="proyectos">
+
+<h2 data-aos="fade-up">Proyectos</h2>
+
+<div class="proyectos">
+
+<div class="proyecto">
+<img src="https://images.unsplash.com/photo-1581092160607-ee22731f3c8c">
+<p>Implementación de sistema de filtración industrial.</p>
+</div>
+
+<div class="proyecto">
+<img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
+<p>Instalación de planta de tratamiento de agua.</p>
+</div>
+
+<div class="proyecto">
+<img src="https://images.unsplash.com/photo-1581092334497-3a3c5a9e9d8d">
+<p>Optimización de sistema de purificación.</p>
 </div>
 
 </div>
@@ -362,9 +409,6 @@ ambientales y sanitarios.
 <div class="logo">Lakos</div>
 <div class="logo">Seko</div>
 <div class="logo">Viqua</div>
-<div class="logo">Hanna Instruments</div>
-<div class="logo">Ozotech</div>
-<div class="logo">Canature</div>
 
 </div>
 
@@ -392,9 +436,9 @@ ambientales y sanitarios.
 
 <section class="cta">
 
-<h2>¿Necesitas optimizar tu sistema de tratamiento de agua?</h2>
+<h2>¿Necesitas optimizar tu sistema de agua?</h2>
 
-<p>Contáctanos para recibir asesoría técnica especializada.</p>
+<p>Solicita una asesoría técnica con nuestro equipo.</p>
 
 <br>
 
@@ -408,13 +452,22 @@ ambientales y sanitarios.
 
 <h2>Contacto</h2>
 
-<p>Email: contacto@hidrosem.com</p>
-<p>Teléfono: +51 000 000 000</p>
-<p>Ubicación: Perú</p>
+<form>
+
+<input type="text" placeholder="Nombre">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Mensaje"></textarea>
+
+<button class="btn">Enviar</button>
+
+</form>
 
 <br>
 
-<a href="mailto:contacto@hidrosem.com" class="btn">Enviar Solicitud</a>
+<p>Email: contacto@hidrosem.com</p>
+<p>Teléfono: +51 000 000 000</p>
 
 </section>
 
