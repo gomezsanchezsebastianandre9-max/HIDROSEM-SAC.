@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>HIDROSEM Ingenieros SAC</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -13,285 +17,504 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f4f7fb;
+background:#f5f7fa;
 color:#333;
 }
 
+/* NAVBAR */
+
 header{
-background:linear-gradient(135deg,#004e92,#1fa2ff);
+background:#0b2a4a;
 color:white;
-padding:90px 20px;
-text-align:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 header h1{
-font-size:45px;
+font-size:22px;
 }
 
 nav{
-background:white;
-padding:15px;
-text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
-position:sticky;
-top:0;
+display:flex;
 }
 
 nav a{
-margin:0 20px;
+color:white;
 text-decoration:none;
-color:#004e92;
-font-weight:600;
+margin-left:25px;
+font-weight:bold;
 }
+
+/* MENU MOBILE */
+
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+height:85vh;
+background:linear-gradient(120deg,#0b2a4a,#0ea5e9);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero button{
+margin-top:30px;
+padding:15px 35px;
+background:white;
+border:none;
+color:#0b2a4a;
+font-size:16px;
+border-radius:5px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* SECCIONES */
 
 section{
-max-width:1200px;
-margin:auto;
-padding:70px 20px;
+padding:80px 10%;
 }
 
-h2{
+.section-title{
 text-align:center;
-margin-bottom:40px;
-color:#004e92;
+font-size:36px;
+margin-bottom:50px;
+color:#0b2a4a;
 }
 
-.grid{
+/* SOBRE NOSOTROS */
+
+.about{
+max-width:900px;
+margin:auto;
+text-align:center;
+line-height:1.7;
+font-size:18px;
+}
+
+/* ESTADISTICAS */
+
+.stats{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+margin-top:50px;
 }
 
-.card{
+.stat{
 background:white;
 padding:30px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.proceso{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
-}
-
-.step{
-background:white;
-padding:25px;
 border-radius:10px;
-width:250px;
 text-align:center;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
+font-size:28px;
+font-weight:bold;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-footer{
-background:#004e92;
+/* SERVICIOS */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+text-align:center;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+.service-card i{
+font-size:40px;
+color:#0ea5e9;
+margin-bottom:15px;
+}
+
+/* PROYECTOS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.project{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* PROVEEDORES */
+
+.logos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.logo{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+font-weight:bold;
+}
+
+/* CERTIFICACIONES */
+
+.certifications{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.cert{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* FORMULARIO */
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button.submit{
+background:#0ea5e9;
+color:white;
+border:none;
+padding:15px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* CONTACTO */
+
+.contact{
+background:#0b2a4a;
 color:white;
 text-align:center;
-padding:30px;
+}
+
+/* FOOTER */
+
+footer{
+background:#081c33;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:15px;
+border-radius:50%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+nav{
+display:none;
+flex-direction:column;
+background:#0b2a4a;
+position:absolute;
+top:70px;
+right:0;
+width:200px;
+padding:20px;
+}
+
+nav a{
+margin:10px 0;
+}
+
+.menu-toggle{
+display:block;
+}
+
+nav.active{
+display:flex;
+}
+
+.hero h2{
+font-size:32px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<h1>HIDROSEM Ingenieros SAC</h1>
-<p>Soluciones profesionales en tratamiento de agua industrial</p>
-<p>RUC: 20603988133</p>
+<h1>HIDROSEM</h1>
 
-</header>
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</div>
 
-<nav>
+<nav id="menu">
 
 <a href="#nosotros">Nosotros</a>
 <a href="#servicios">Servicios</a>
-<a href="#sectores">Sectores</a>
-<a href="#proceso">Proceso</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#proveedores">Proveedores</a>
+<a href="#certificaciones">Certificaciones</a>
 <a href="#contacto">Contacto</a>
 
 </nav>
 
+</header>
+
+<section class="hero">
+
+<div>
+
+<h2>Ingeniería en Tratamiento de Agua</h2>
+
+<p>
+Soluciones profesionales en tratamiento de agua industrial,
+mantenimiento de equipos y suministro de productos químicos especializados.
+</p>
+
+<a href="#contacto">
+<button>Solicitar Cotización</button>
+</a>
+
+</div>
+
+</section>
+
 <section id="nosotros">
 
-<h2>Quiénes Somos</h2>
+<h2 class="section-title">Sobre Nosotros</h2>
 
-<p style="text-align:center; max-width:900px; margin:auto; line-height:1.7">
+<div class="about">
 
-HIDROSEM Ingenieros SAC es una empresa peruana dedicada a brindar soluciones
-integrales en tratamiento de agua industrial, mantenimiento de equipos y
-suministro de productos químicos especializados.
-
-La empresa inició sus actividades en el año 2019 y se encuentra
-registrada y activa en el Perú, desarrollando servicios relacionados con
-captación, tratamiento y distribución de agua para diferentes sectores industriales.  
-
-Nuestro equipo técnico brinda asesoría, diseño, instalación y mantenimiento
-de sistemas hidráulicos con el objetivo de optimizar el uso del agua
-y mejorar la eficiencia de los procesos industriales.
-
+<p>
+HIDROSEM Ingenieros SAC con RUC 20603988133 es una empresa con amplia experiencia en el sector de tratamiento de agua industrial.
 </p>
 
-</section>
-
-<section>
-
-<h2>Misión</h2>
-
-<p style="text-align:center; max-width:800px; margin:auto">
-Brindar soluciones eficientes e innovadoras en el tratamiento y manejo del agua,
-proporcionando productos y servicios de alta calidad que garanticen la eficiencia
-operativa y el cuidado del medio ambiente.
+<p>
+Nos especializamos en diseño, instalación, mantenimiento y suministro de equipos para sistemas de tratamiento de agua.
 </p>
 
-</section>
+</div>
 
-<section>
+<div class="stats">
 
-<h2>Visión</h2>
+<div class="stat">+10 Años de Experiencia</div>
+<div class="stat">+120 Proyectos</div>
+<div class="stat">+60 Clientes Industriales</div>
 
-<p style="text-align:center; max-width:800px; margin:auto">
-Ser una empresa líder en el Perú en soluciones de tratamiento de agua industrial,
-reconocida por la calidad de nuestros servicios, innovación tecnológica
-y compromiso con el desarrollo sostenible.
-</p>
+</div>
 
 </section>
 
 <section id="servicios">
 
-<h2>Nuestros Servicios</h2>
+<h2 class="section-title">Nuestros Servicios</h2>
 
-<div class="grid">
+<div class="services">
 
-<div class="card">
+<div class="service-card">
+<i class="fas fa-water"></i>
 <h3>Tratamiento de Agua Industrial</h3>
-<p>Sistemas para optimizar la calidad del agua en procesos industriales.</p>
 </div>
 
-<div class="card">
-<h3>Productos Químicos</h3>
-<p>Productos químicos especializados para calderos y sistemas industriales.</p>
+<div class="service-card">
+<i class="fas fa-flask"></i>
+<h3>Productos Químicos para Calderos</h3>
 </div>
 
-<div class="card">
+<div class="service-card">
+<i class="fas fa-tools"></i>
 <h3>Mantenimiento de Calderos</h3>
-<p>Servicios de mantenimiento preventivo y correctivo de equipos.</p>
 </div>
 
-<div class="card">
+<div class="service-card">
+<i class="fas fa-filter"></i>
 <h3>Sistemas de Filtración</h3>
-<p>Diseño e instalación de filtros y ablandadores automáticos.</p>
 </div>
 
-<div class="card">
-<h3>Equipos de Ósmosis</h3>
-<p>Diseño, instalación y mantenimiento de sistemas de ósmosis inversa.</p>
+<div class="service-card">
+<i class="fas fa-industry"></i>
+<h3>Osmosis Inversa</h3>
 </div>
 
-<div class="card">
-<h3>Limpieza Industrial</h3>
-<p>Limpieza de trampas de grasa y pozos sépticos.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="sectores">
-
-<h2>Sectores que Atendemos</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Industria Alimentaria</h3>
-<p>Control y tratamiento del agua para procesos de producción.</p>
-</div>
-
-<div class="card">
-<h3>Sector Minero</h3>
-<p>Sistemas de tratamiento de agua para procesos industriales.</p>
-</div>
-
-<div class="card">
-<h3>Sector Textil</h3>
-<p>Optimización del uso del agua en procesos de producción.</p>
-</div>
-
-<div class="card">
-<h3>Hospitales y Hoteles</h3>
-<p>Sistemas de purificación y tratamiento de agua.</p>
+<div class="service-card">
+<i class="fas fa-vial"></i>
+<h3>Análisis de Agua</h3>
 </div>
 
 </div>
 
 </section>
 
-<section id="proceso">
+<section id="proyectos">
 
-<h2>Nuestro Proceso de Trabajo</h2>
+<h2 class="section-title">Proyectos Realizados</h2>
 
-<div class="proceso">
+<div class="projects">
 
-<div class="step">
-<h3>1</h3>
-<p>Evaluación técnica del sistema de agua.</p>
+<div class="project">
+<h3>Planta de Tratamiento Industrial</h3>
+<p>Diseño e instalación para empresa alimentaria.</p>
 </div>
 
-<div class="step">
-<h3>2</h3>
-<p>Diseño de la solución adecuada.</p>
+<div class="project">
+<h3>Sistema de Osmosis Inversa</h3>
+<p>Implementación para planta industrial.</p>
 </div>
 
-<div class="step">
-<h3>3</h3>
-<p>Instalación de equipos y sistemas.</p>
-</div>
-
-<div class="step">
-<h3>4</h3>
-<p>Mantenimiento y soporte técnico.</p>
+<div class="project">
+<h3>Mantenimiento de Calderos</h3>
+<p>Servicio integral en sector manufactura.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="contacto">
+<section id="proveedores">
 
-<h2>Contacto</h2>
+<h2 class="section-title">Principales Proveedores</h2>
 
-<p style="text-align:center">
+<div class="logos">
 
-<strong>Empresa:</strong> HIDROSEM Ingenieros SAC<br>
-<strong>RUC:</strong> 20603988133<br>
-<strong>Ubicación:</strong> San Juan de Lurigancho, Lima - Perú<br>
-Email: contacto@hidrosem.com<br>
-Teléfono: +51 000 000 000
+<div class="logo">Hydronix</div>
+<div class="logo">Pentair</div>
+<div class="logo">Hanna Instruments</div>
+<div class="logo">Watts</div>
+<div class="logo">Seko</div>
+<div class="logo">Viqua</div>
+<div class="logo">Lakos</div>
 
-</p>
+</div>
+
+</section>
+
+<section id="certificaciones">
+
+<h2 class="section-title">Certificaciones</h2>
+
+<div class="certifications">
+
+<div class="cert">Registro Nacional de Proveedores (RNP)</div>
+<div class="cert">Cumplimiento Normativas Industriales</div>
+<div class="cert">Personal Técnico Especializado</div>
+
+</div>
+
+</section>
+
+<section id="contacto" class="contact">
+
+<h2>Solicitar Cotización</h2>
+
+<br>
+
+<form>
+
+<input type="text" placeholder="Nombre">
+
+<input type="email" placeholder="Correo">
+
+<input type="text" placeholder="Empresa">
+
+<textarea placeholder="Detalle su requerimiento"></textarea>
+
+<button class="submit">Enviar Solicitud</button>
+
+</form>
+
+<br>
+
+<p>📞 974 584 564 | 949 392 573</p>
+<p>✉ ventas.hidrosem@gmail.com</p>
 
 </section>
 
 <footer>
 
-<p>© 2026 HIDROSEM Ingenieros SAC</p>
-<p>Especialistas en tratamiento de agua industrial</p>
+© 2026 HIDROSEM Ingenieros SAC
 
 </footer>
+
+<a class="whatsapp" href="https://wa.me/51974584564" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+AOS.init({duration:1000});
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
 
 </body>
 </html>
