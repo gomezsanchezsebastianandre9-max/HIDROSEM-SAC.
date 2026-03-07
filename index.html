@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HIDROSEM Ingenieros SAC</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>HIDROSEM | Servicios Industriales</title>
 
 <style>
 
@@ -22,19 +17,17 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
+background:#f4f6f9;
 color:#333;
 }
 
-/* NAVBAR */
-
 header{
-background:#0b2a4a;
+background:#0d1b2a;
 color:white;
+padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
 position:sticky;
 top:0;
 z-index:1000;
@@ -44,144 +37,93 @@ header h1{
 font-size:22px;
 }
 
-nav{
-display:flex;
-}
-
 nav a{
 color:white;
 text-decoration:none;
-margin-left:25px;
-font-weight:bold;
+margin-left:20px;
+font-weight:500;
+transition:.3s;
 }
 
-/* MENU MOBILE */
-
-.menu-toggle{
-display:none;
-font-size:24px;
-cursor:pointer;
+nav a:hover{
+color:#00b4d8;
 }
-
-/* HERO */
 
 .hero{
-height:85vh;
-background:linear-gradient(120deg,#0b2a4a,#0ea5e9);
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1581092919535-7146ff1a590d");
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 color:white;
-padding:20px;
 }
 
 .hero h2{
-font-size:48px;
+font-size:50px;
 margin-bottom:20px;
+animation:fadeIn 2s;
 }
 
-.hero button{
-margin-top:30px;
-padding:15px 35px;
-background:white;
-border:none;
-color:#0b2a4a;
-font-size:16px;
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+background:#00b4d8;
+color:white;
+padding:14px 30px;
+text-decoration:none;
 border-radius:5px;
+transition:.3s;
 font-weight:bold;
-cursor:pointer;
 }
 
-/* SECCIONES */
+.btn:hover{
+background:#0077b6;
+}
 
 section{
 padding:80px 10%;
 }
 
-.section-title{
+section h2{
+font-size:32px;
+margin-bottom:40px;
+color:#0d1b2a;
 text-align:center;
-font-size:36px;
-margin-bottom:50px;
-color:#0b2a4a;
 }
 
-/* SOBRE NOSOTROS */
-
-.about{
-max-width:900px;
-margin:auto;
-text-align:center;
-line-height:1.7;
-font-size:18px;
-}
-
-/* ESTADISTICAS */
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-margin-top:50px;
-}
-
-.stat{
-background:white;
-padding:30px;
-border-radius:10px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
-
-/* SERVICIOS */
-
-.services{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+gap:25px;
 }
 
-.service-card{
+.card{
 background:white;
-padding:30px;
+padding:25px;
 border-radius:10px;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-.service-card:hover{
-transform:translateY(-10px);
+.card:hover{
+transform:translateY(-6px);
 }
 
-.service-card i{
-font-size:40px;
-color:#0ea5e9;
-margin-bottom:15px;
+.card h3{
+margin-bottom:10px;
+color:#0077b6;
 }
 
-/* PROYECTOS */
-
-.projects{
+.proveedores, .clientes{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.project{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* PROVEEDORES */
-
-.logos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:20px;
 text-align:center;
 }
@@ -190,331 +132,231 @@ text-align:center;
 background:white;
 padding:20px;
 border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 font-weight:bold;
 }
 
-/* CERTIFICACIONES */
-
-.certifications{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-text-align:center;
-}
-
-.cert{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
-
-/* FORMULARIO */
-
-form{
-max-width:600px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-input,textarea{
-padding:12px;
-border:1px solid #ccc;
-border-radius:5px;
-}
-
-button.submit{
-background:#0ea5e9;
-color:white;
-border:none;
-padding:15px;
-font-weight:bold;
-cursor:pointer;
-}
-
-/* CONTACTO */
-
-.contact{
-background:#0b2a4a;
+.contacto{
+background:#0d1b2a;
 color:white;
 text-align:center;
 }
 
-/* FOOTER */
-
-footer{
-background:#081c33;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:28px;
-padding:15px;
-border-radius:50%;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-nav{
-display:none;
-flex-direction:column;
-background:#0b2a4a;
-position:absolute;
-top:70px;
-right:0;
-width:200px;
-padding:20px;
-}
-
-nav a{
+.contacto p{
 margin:10px 0;
 }
 
-.menu-toggle{
-display:block;
+footer{
+background:#020c1b;
+color:white;
+text-align:center;
+padding:20px;
 }
 
-nav.active{
-display:flex;
-}
-
-.hero h2{
-font-size:32px;
-}
-
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <h1>HIDROSEM</h1>
 
-<div class="menu-toggle" onclick="toggleMenu()">
-<i class="fas fa-bars"></i>
-</div>
-
-<nav id="menu">
-
+<nav>
 <a href="#nosotros">Nosotros</a>
 <a href="#servicios">Servicios</a>
-<a href="#proyectos">Proyectos</a>
 <a href="#proveedores">Proveedores</a>
-<a href="#certificaciones">Certificaciones</a>
+<a href="#clientes">Clientes</a>
 <a href="#contacto">Contacto</a>
-
 </nav>
-
 </header>
 
+
 <section class="hero">
-
 <div>
-
-<h2>Ingeniería en Tratamiento de Agua</h2>
-
-<p>
-Soluciones profesionales en tratamiento de agua industrial,
-mantenimiento de equipos y suministro de productos químicos especializados.
-</p>
-
-<a href="#contacto">
-<button>Solicitar Cotización</button>
-</a>
-
+<h2>Soluciones Industriales y Servicios Especializados</h2>
+<p>Calidad, seguridad y eficiencia en cada proyecto</p>
+<a href="#contacto" class="btn">Solicitar Cotización</a>
 </div>
-
 </section>
+
 
 <section id="nosotros">
+<h2>Sobre Nosotros</h2>
 
-<h2 class="section-title">Sobre Nosotros</h2>
+<p style="max-width:900px;margin:auto;text-align:center;line-height:1.7">
 
-<div class="about">
+HIDROSEM es una empresa especializada en servicios industriales,
+mantenimiento técnico, soluciones hidráulicas y suministro de
+equipos para diferentes sectores productivos.
 
-<p>
-HIDROSEM Ingenieros SAC con RUC 20603988133 es una empresa con amplia experiencia en el sector de tratamiento de agua industrial.
+Nuestro compromiso es ofrecer soluciones integrales con altos
+estándares de calidad, seguridad y eficiencia operativa.
+
+Contamos con personal altamente capacitado, tecnología especializada
+y alianzas estratégicas con proveedores reconocidos del sector.
+
+Trabajamos con empresas del sector industrial, minero,
+construcción, energía y manufactura, brindando servicios confiables
+y adaptados a las necesidades de cada cliente.
+
+<br><br>
+
+<strong>Nuestros principios:</strong>
+
+<br><br>
+
+✔ Calidad en cada servicio  
+✔ Seguridad operativa  
+✔ Cumplimiento de plazos  
+✔ Innovación técnica  
+✔ Compromiso con el cliente  
+
+<br><br>
+
+<strong>Certificaciones y estándares</strong>
+
+<br>
+
+Nuestros procesos siguen estándares técnicos y de seguridad
+industrial que garantizan eficiencia, confiabilidad y cumplimiento
+de normativas en cada proyecto ejecutado.
+
 </p>
-
-<p>
-Nos especializamos en diseño, instalación, mantenimiento y suministro de equipos para sistemas de tratamiento de agua.
-</p>
-
-</div>
-
-<div class="stats">
-
-<div class="stat">+10 Años de Experiencia</div>
-<div class="stat">+120 Proyectos</div>
-<div class="stat">+60 Clientes Industriales</div>
-
-</div>
 
 </section>
+
+
 
 <section id="servicios">
 
-<h2 class="section-title">Nuestros Servicios</h2>
+<h2>Nuestros Servicios</h2>
 
-<div class="services">
+<div class="grid">
 
-<div class="service-card">
-<i class="fas fa-water"></i>
-<h3>Tratamiento de Agua Industrial</h3>
+<div class="card">
+<h3>Mantenimiento Industrial</h3>
+<p>Servicio especializado de mantenimiento preventivo y correctivo de equipos industriales.</p>
 </div>
 
-<div class="service-card">
-<i class="fas fa-flask"></i>
-<h3>Productos Químicos para Calderos</h3>
+<div class="card">
+<h3>Sistemas Hidráulicos</h3>
+<p>Diseño, reparación e instalación de sistemas hidráulicos para maquinaria industrial.</p>
 </div>
 
-<div class="service-card">
-<i class="fas fa-tools"></i>
-<h3>Mantenimiento de Calderos</h3>
+<div class="card">
+<h3>Montaje de Equipos</h3>
+<p>Instalación y puesta en marcha de maquinaria y equipos industriales.</p>
 </div>
 
-<div class="service-card">
-<i class="fas fa-filter"></i>
-<h3>Sistemas de Filtración</h3>
+<div class="card">
+<h3>Soldadura Industrial</h3>
+<p>Trabajos de soldadura especializada para estructuras metálicas y componentes industriales.</p>
 </div>
 
-<div class="service-card">
-<i class="fas fa-industry"></i>
-<h3>Osmosis Inversa</h3>
+<div class="card">
+<h3>Fabricación Metalmecánica</h3>
+<p>Diseño y fabricación de piezas metálicas personalizadas.</p>
 </div>
 
-<div class="service-card">
-<i class="fas fa-vial"></i>
-<h3>Análisis de Agua</h3>
+<div class="card">
+<h3>Reparación de Equipos</h3>
+<p>Diagnóstico y reparación de maquinaria industrial.</p>
 </div>
 
+<div class="card">
+<h3>Instalaciones Técnicas</h3>
+<p>Instalación de sistemas mecánicos e hidráulicos.</p>
 </div>
 
-</section>
-
-<section id="proyectos">
-
-<h2 class="section-title">Proyectos Realizados</h2>
-
-<div class="projects">
-
-<div class="project">
-<h3>Planta de Tratamiento Industrial</h3>
-<p>Diseño e instalación para empresa alimentaria.</p>
+<div class="card">
+<h3>Servicios de Ingeniería</h3>
+<p>Asesoría técnica, diseño y desarrollo de soluciones industriales.</p>
 </div>
 
-<div class="project">
-<h3>Sistema de Osmosis Inversa</h3>
-<p>Implementación para planta industrial.</p>
+<div class="card">
+<h3>Automatización</h3>
+<p>Optimización de procesos industriales mediante automatización.</p>
 </div>
 
-<div class="project">
-<h3>Mantenimiento de Calderos</h3>
-<p>Servicio integral en sector manufactura.</p>
+<div class="card">
+<h3>Venta de Equipos Industriales</h3>
+<p>Suministro de herramientas, equipos y repuestos industriales.</p>
 </div>
 
 </div>
 
 </section>
+
+
 
 <section id="proveedores">
 
-<h2 class="section-title">Principales Proveedores</h2>
+<h2>Proveedores</h2>
 
-<div class="logos">
+<div class="proveedores">
 
-<div class="logo">Hydronix</div>
-<div class="logo">Pentair</div>
-<div class="logo">Hanna Instruments</div>
-<div class="logo">Watts</div>
-<div class="logo">Seko</div>
-<div class="logo">Viqua</div>
-<div class="logo">Lakos</div>
-
-</div>
-
-</section>
-
-<section id="certificaciones">
-
-<h2 class="section-title">Certificaciones</h2>
-
-<div class="certifications">
-
-<div class="cert">Registro Nacional de Proveedores (RNP)</div>
-<div class="cert">Cumplimiento Normativas Industriales</div>
-<div class="cert">Personal Técnico Especializado</div>
+<div class="logo">Bosch Rexroth</div>
+<div class="logo">Parker Hannifin</div>
+<div class="logo">Eaton</div>
+<div class="logo">Festo</div>
+<div class="logo">Siemens</div>
+<div class="logo">Schneider Electric</div>
+<div class="logo">SMC</div>
+<div class="logo">Yuken</div>
+<div class="logo">Hydac</div>
+<div class="logo">Danfoss</div>
 
 </div>
 
 </section>
 
-<section id="contacto" class="contact">
 
-<h2>Solicitar Cotización</h2>
 
-<br>
+<section id="clientes">
 
-<form>
+<h2>Clientes</h2>
 
-<input type="text" placeholder="Nombre">
+<div class="clientes">
 
-<input type="email" placeholder="Correo">
+<div class="logo">Sector Minero</div>
+<div class="logo">Industria Manufacturera</div>
+<div class="logo">Empresas de Construcción</div>
+<div class="logo">Empresas Energéticas</div>
+<div class="logo">Industria Metalúrgica</div>
+<div class="logo">Plantas Industriales</div>
 
-<input type="text" placeholder="Empresa">
-
-<textarea placeholder="Detalle su requerimiento"></textarea>
-
-<button class="submit">Enviar Solicitud</button>
-
-</form>
-
-<br>
-
-<p>📞 974 584 564 | 949 392 573</p>
-<p>✉ ventas.hidrosem@gmail.com</p>
+</div>
 
 </section>
+
+
+
+<section id="contacto" class="contacto">
+
+<h2>Contacto</h2>
+
+<p><strong>Empresa:</strong> HIDROSEM</p>
+<p><strong>Correo:</strong> contacto@hidrosem.com</p>
+<p><strong>Teléfono:</strong> +51 000 000 000</p>
+<p><strong>Ubicación:</strong> Perú</p>
+
+<br>
+
+<a href="mailto:contacto@hidrosem.com" class="btn">Enviar Solicitud</a>
+
+</section>
+
 
 <footer>
 
-© 2026 HIDROSEM Ingenieros SAC
+© 2026 HIDROSEM - Todos los derechos reservados
 
 </footer>
-
-<a class="whatsapp" href="https://wa.me/51974584564" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-<script>
-
-AOS.init({duration:1000});
-
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-
-</script>
 
 </body>
 </html>
