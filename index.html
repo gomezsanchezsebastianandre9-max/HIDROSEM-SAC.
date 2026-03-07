@@ -6,7 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HIDROSEM Ingenieros SAC | Tratamiento de Agua Industrial</title>
+<title>HIDROSEM Ingenieros SAC | Ingeniería en Tratamiento de Agua</title>
+
+<meta name="description" content="HIDROSEM Ingenieros SAC ofrece soluciones profesionales en tratamiento de agua, filtración, desinfección UV y sistemas industriales.">
 
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -34,14 +36,19 @@ padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
+position:fixed;
+width:100%;
 top:0;
 z-index:1000;
+transition:0.3s;
+}
+
+header.scrolled{
+background:#071224;
 }
 
 header h1{
 font-size:22px;
-letter-spacing:1px;
 }
 
 nav a{
@@ -58,7 +65,7 @@ color:#00b4d8;
 /* HERO */
 
 .hero{
-height:90vh;
+height:100vh;
 background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
 url("https://images.unsplash.com/photo-1581093458791-9d09e13d6c8a");
 background-size:cover;
@@ -99,7 +106,7 @@ background:#0077b6;
 /* SECTIONS */
 
 section{
-padding:90px 8%;
+padding:100px 8%;
 }
 
 section h2{
@@ -145,23 +152,6 @@ font-size:45px;
 color:#00b4d8;
 }
 
-/* LOGOS */
-
-.logos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-text-align:center;
-}
-
-.logo{
-background:white;
-padding:20px;
-border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-font-weight:bold;
-}
-
 /* PROYECTOS */
 
 .proyectos{
@@ -187,21 +177,24 @@ object-fit:cover;
 padding:20px;
 }
 
-/* CTA */
+/* LOGOS */
 
-.cta{
-background:#0077b6;
-color:white;
+.logos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
 text-align:center;
-padding:80px 20px;
 }
 
-.cta h2{
-color:white;
-margin-bottom:20px;
+.logo{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+font-weight:bold;
 }
 
-/* CONTACTO */
+/* CONTACT */
 
 .contacto{
 background:#0a1d37;
@@ -232,13 +225,28 @@ padding:20px;
 font-size:14px;
 }
 
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:15px 20px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
 </style>
 
 </head>
 
 <body>
 
-<header>
+<header id="header">
 
 <h1>HIDROSEM Ingenieros SAC</h1>
 
@@ -265,8 +273,8 @@ font-size:14px;
 
 <p>
 
-Soluciones tecnológicas para filtración, desinfección, dosificación
-y optimización de sistemas de agua para industrias y empresas.
+Diseño, implementación y mantenimiento de sistemas de tratamiento de agua
+para industrias, empresas y proyectos de ingeniería.
 
 </p>
 
@@ -284,16 +292,14 @@ y optimización de sistemas de agua para industrias y empresas.
 
 <p style="max-width:900px;margin:auto;text-align:center" data-aos="fade-up">
 
-HIDROSEM Ingenieros SAC es una empresa especializada en el diseño,
-implementación y mantenimiento de sistemas de tratamiento de agua
-para aplicaciones industriales, comerciales e institucionales.
+HIDROSEM Ingenieros SAC es una empresa especializada en soluciones
+de tratamiento de agua para aplicaciones industriales y comerciales.
 
-Nuestro enfoque se basa en ofrecer soluciones tecnológicas que
-permitan optimizar el uso del agua, mejorar la eficiencia de los
-procesos productivos y cumplir con estándares ambientales.
+Nuestro equipo cuenta con experiencia en diseño de plantas,
+sistemas de filtración, desinfección UV y automatización.
 
-Trabajamos con equipos de alta calidad y proveedores internacionales
-para garantizar confiabilidad en cada proyecto.
+Trabajamos con proveedores internacionales para garantizar
+tecnología confiable y soluciones eficientes.
 
 </p>
 
@@ -333,35 +339,12 @@ para garantizar confiabilidad en cada proyecto.
 
 <div class="grid">
 
-<div class="card">
-<h3>Diseño de Plantas de Tratamiento</h3>
-<p>Ingeniería para sistemas de tratamiento de agua industrial.</p>
-</div>
-
-<div class="card">
-<h3>Sistemas de Filtración</h3>
-<p>Instalación de filtros industriales y equipos de purificación.</p>
-</div>
-
-<div class="card">
-<h3>Desinfección UV</h3>
-<p>Eliminación de microorganismos mediante tecnología UV.</p>
-</div>
-
-<div class="card">
-<h3>Sistemas de Dosificación</h3>
-<p>Equipos automatizados para tratamiento químico.</p>
-</div>
-
-<div class="card">
-<h3>Mantenimiento</h3>
-<p>Servicio preventivo y correctivo de plantas de tratamiento.</p>
-</div>
-
-<div class="card">
-<h3>Suministro de Equipos</h3>
-<p>Venta de bombas, válvulas, sensores y repuestos.</p>
-</div>
+<div class="card"><h3>Diseño de Plantas de Tratamiento</h3></div>
+<div class="card"><h3>Sistemas de Filtración</h3></div>
+<div class="card"><h3>Desinfección UV</h3></div>
+<div class="card"><h3>Sistemas de Dosificación</h3></div>
+<div class="card"><h3>Mantenimiento Industrial</h3></div>
+<div class="card"><h3>Suministro de Equipos</h3></div>
 
 </div>
 
@@ -377,17 +360,12 @@ para garantizar confiabilidad en cada proyecto.
 
 <div class="proyecto">
 <img src="https://images.unsplash.com/photo-1581092160607-ee22731f3c8c">
-<p>Implementación de sistema de filtración industrial.</p>
+<p>Sistema de filtración industrial</p>
 </div>
 
 <div class="proyecto">
 <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
-<p>Instalación de planta de tratamiento de agua.</p>
-</div>
-
-<div class="proyecto">
-<img src="https://images.unsplash.com/photo-1581092334497-3a3c5a9e9d8d">
-<p>Optimización de sistema de purificación.</p>
+<p>Instalación de planta de tratamiento</p>
 </div>
 
 </div>
@@ -407,8 +385,6 @@ para garantizar confiabilidad en cada proyecto.
 <div class="logo">Aquafine</div>
 <div class="logo">Watts</div>
 <div class="logo">Lakos</div>
-<div class="logo">Seko</div>
-<div class="logo">Viqua</div>
 
 </div>
 
@@ -422,27 +398,12 @@ para garantizar confiabilidad en cada proyecto.
 
 <div class="logos">
 
-<div class="logo">Molinos Asociados SAC</div>
+<div class="logo">Molinos Asociados</div>
 <div class="logo">VSI Industrial</div>
 <div class="logo">Silpet</div>
 <div class="logo">Allusud</div>
-<div class="logo">Closure Systems International</div>
 
 </div>
-
-</section>
-
-
-
-<section class="cta">
-
-<h2>¿Necesitas optimizar tu sistema de agua?</h2>
-
-<p>Solicita una asesoría técnica con nuestro equipo.</p>
-
-<br>
-
-<a href="#contacto" class="btn">Solicitar Cotización</a>
 
 </section>
 
@@ -456,7 +417,7 @@ para garantizar confiabilidad en cada proyecto.
 
 <input type="text" placeholder="Nombre">
 
-<input type="email" placeholder="Email">
+<input type="email" placeholder="Correo">
 
 <textarea placeholder="Mensaje"></textarea>
 
@@ -481,10 +442,18 @@ para garantizar confiabilidad en cada proyecto.
 
 
 
+<a class="whatsapp" href="https://wa.me/51900000000">💬</a>
+
+
+
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
 AOS.init();
+
+window.addEventListener("scroll",function(){
+document.getElementById("header").classList.toggle("scrolled",window.scrollY>50);
+});
 </script>
 
 </body>
