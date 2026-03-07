@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -54,7 +53,7 @@ font-size:22px;
 letter-spacing:2px;
 }
 
-/* NAV */
+/* NAV LINKS */
 
 nav{
 display:flex;
@@ -106,6 +105,8 @@ padding:20px;
 position:relative;
 overflow:hidden;
 }
+
+/* Burbujas animadas */
 
 .hero span{
 position:absolute;
@@ -246,20 +247,6 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* CLIENTES SLIDER */
-
-.slider{
-display:flex;
-gap:20px;
-overflow:hidden;
-animation:slide 20s linear infinite;
-}
-
-@keyframes slide{
-0%{transform:translateX(0)}
-100%{transform:translateX(-50%)}
-}
-
 /* CONTACT */
 
 .contact{
@@ -343,7 +330,6 @@ display:block;
 
 <a href="#nosotros">Nosotros</a>
 <a href="#servicios">Servicios</a>
-<a href="#proyectos">Proyectos</a>
 <a href="#proveedores">Proveedores</a>
 <a href="#clientes">Clientes</a>
 <a href="#contacto">Contacto</a>
@@ -411,6 +397,8 @@ Estamos inscritos en el Registro Nacional de Proveedores (RNP) y contamos con pe
 
 </section>
 
+<!-- RESTO IGUAL -->
+
 <section id="servicios">
 
 <h2 class="section-title">Nuestros Servicios</h2>
@@ -423,20 +411,6 @@ Estamos inscritos en el Registro Nacional de Proveedores (RNP) y contamos con pe
 <div class="service-card"><i class="fas fa-filter"></i><h3>Filtros y Ablandadores</h3><p>Instalación de sistemas de filtración.</p></div>
 <div class="service-card"><i class="fas fa-industry"></i><h3>Osmosis Inversa</h3><p>Diseño e instalación de plantas.</p></div>
 <div class="service-card"><i class="fas fa-vial"></i><h3>Análisis de Agua</h3><p>Reactivos y análisis químicos.</p></div>
-
-</div>
-
-</section>
-
-<section id="proyectos">
-
-<h2 class="section-title">Proyectos Realizados</h2>
-
-<div class="services">
-
-<div class="service-card"><i class="fas fa-industry"></i><h3>Sistemas de Tratamiento de Agua</h3><p>Implementación de soluciones para optimizar la calidad del agua en procesos industriales.</p></div>
-<div class="service-card"><i class="fas fa-water"></i><h3>Optimización de Calderos</h3><p>Mejoras en eficiencia y mantenimiento preventivo en sistemas industriales.</p></div>
-<div class="service-card"><i class="fas fa-flask"></i><h3>Control Químico</h3><p>Implementación de productos químicos para control de incrustaciones y corrosión.</p></div>
 
 </div>
 
@@ -471,13 +445,7 @@ Estamos inscritos en el Registro Nacional de Proveedores (RNP) y contamos con pe
 
 <h2 class="section-title">Principales Clientes</h2>
 
-<div class="slider">
-
-<div class="logo">Molinos Asociados SAC</div>
-<div class="logo">VSI Industrial</div>
-<div class="logo">Silpet</div>
-<div class="logo">Allusud</div>
-<div class="logo">Closure Systems International</div>
+<div class="logos">
 
 <div class="logo">Molinos Asociados SAC</div>
 <div class="logo">VSI Industrial</div>
@@ -516,13 +484,19 @@ Estamos inscritos en el Registro Nacional de Proveedores (RNP) y contamos con pe
 
 AOS.init({duration:1000,once:true});
 
+/* MENU MOBILE */
+
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
 
+/* NAVBAR SCROLL */
+
 window.addEventListener("scroll",()=>{
 document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>50);
 });
+
+/* COUNTER */
 
 const counters=document.querySelectorAll(".counter");
 
@@ -550,4 +524,3 @@ updateCounter();
 
 </body>
 </html>
-```
